@@ -1,4 +1,40 @@
 footer {
-  border-top: 1px solid #222;
-  margin-top: 1rem;
+  border-top: 1px solid var(--rule);
+  margin-top: 4rem;
+}
+
+footer .footer-inner {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 28px 32px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: var(--fg-dim);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+footer .footer-inner p { margin: 0; max-width: none; }
+
+footer .footer-links {
+  display: flex;
+  gap: 20px;
+}
+
+footer .footer-links a {
+  color: var(--fg-mute);
+  text-decoration: none;
+  transition: color 0.2s;
+  display: inline-flex;
+  align-items: center;
+}
+footer .footer-links a:hover { color: var(--fg); }
+footer .footer-links svg {
+  width: 14px;
+  height: 14px;
+  display: block;
 }
