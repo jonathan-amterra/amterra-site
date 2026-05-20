@@ -8,28 +8,32 @@ summaryLength = 25
     dir = ':cacheDir/images'
 
 [menus]
-  [[menus.main]]
-    identifier = 'about'
-    name = 'Company'
-    weight = 10
-  [[menus.main]]
-    name = 'Mission'
-    pageRef = '/mission'
-    parent = 'about'
-    weight = 10
-  [[menus.main]]
-    name = 'Team'
-    pageRef = '/team'
-    parent = 'about'
-    weight = 20
-  [[menus.main]]
-    name = 'Vehicles'
-    pageRef = '/vehicles'
-    weight = 5
-  [[menus.main]]
-    name = 'News'
-    pageRef = '/news'
-    weight = 25
+  # NOTE: Vehicles, Company (Mission/Team), and News menu entries are temporarily
+  # disabled while their pages are stubs. Restore by uncommenting and removing the
+  # `draft = true` line from each content file.
+  #
+  # [[menus.main]]
+  #   identifier = 'about'
+  #   name = 'Company'
+  #   weight = 10
+  # [[menus.main]]
+  #   name = 'Mission'
+  #   pageRef = '/mission'
+  #   parent = 'about'
+  #   weight = 10
+  # [[menus.main]]
+  #   name = 'Team'
+  #   pageRef = '/team'
+  #   parent = 'about'
+  #   weight = 20
+  # [[menus.main]]
+  #   name = 'Vehicles'
+  #   pageRef = '/vehicles'
+  #   weight = 5
+  # [[menus.main]]
+  #   name = 'News'
+  #   pageRef = '/news'
+  #   weight = 25
   [[menus.main]]
     identifier = 'contact'
     name = 'Contact'
