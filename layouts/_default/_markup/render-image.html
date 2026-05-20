@@ -1,0 +1,10 @@
+{{- /*
+  Render hook for markdown images.
+
+  Hugo's `relURL` and `absURL` treat paths starting with `/` as already-host-rooted
+  and do NOT prepend the baseURL's path component. That breaks deployments under a
+  subpath (e.g. GitHub Pages at /amterra-site/). This hook strips the leading slash
+  and runs the path through `relURL`, which prepends baseURL.Path for relative
+  inputs — so `/images/foo.png` becomes `/amterra-site/images/foo.png` at build time.
+*/ -}}
+<img src="{{ (strings.TrimPrefix "/" .Destination) | relURL }}" alt="{{ .PlainText }}"{{ with .Title }} title="{{ . }}"{{ end }}>
