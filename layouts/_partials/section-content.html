@@ -1,0 +1,12 @@
+{{- /*
+  Wraps each H2-delimited block of rendered markdown in a <section class="md-section">.
+
+  Combined with CSS, this lets markdown authors place an image directly under a
+  heading and have it render as a right-hand column spanning the section's height —
+  with no shortcodes, no front matter, just standard inline ![]() syntax.
+
+  Usage: {{ partial "section-content.html" . }}
+*/ -}}
+{{- $content := .Content -}}
+{{- $content = replaceRE `(<h2[^>]*>)` `</section><section class="md-section">$1` $content -}}
+{{- printf `<section class="md-section">%s</section>` $content | safeHTML -}}

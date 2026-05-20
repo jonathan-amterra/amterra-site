@@ -1,2 +1,6 @@
-<h1>{{ site.Title }}</h1>
-{{ partial "menu.html" (dict "menuID" "main" "page" .) }}
+<div class="nav-inner">
+  <a class="brand" href="{{ site.Home.RelPermalink }}">{{ site.Title }}</a>
+  <div class="nav-links">
+    {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
+  </div>
+</div>

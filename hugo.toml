@@ -1,7 +1,51 @@
 baseURL = 'https://example.org/'
 locale = 'en-us'
 title = 'American Terraforming Corporation'
+summaryLength = 25
 
 [caches]
   [caches.images]
     dir = ':cacheDir/images'
+
+[menus]
+  [[menus.main]]
+    identifier = 'about'
+    name = 'Company'
+    weight = 10
+  [[menus.main]]
+    name = 'Mission'
+    pageRef = '/mission'
+    parent = 'about'
+    weight = 10
+  [[menus.main]]
+    name = 'Team'
+    pageRef = '/team'
+    parent = 'about'
+    weight = 20
+  [[menus.main]]
+    name = 'Vehicles'
+    pageRef = '/vehicles'
+    weight = 5
+  [[menus.main]]
+    name = 'News'
+    pageRef = '/news'
+    weight = 25
+  [[menus.main]]
+    identifier = 'contact'
+    name = 'Contact'
+    weight = 20
+  [[menus.main]]
+    name = 'Clients'
+    pageRef = '/clients'
+    parent = 'contact'
+    weight = 10
+  [[menus.main]]
+    name = 'Talent'
+    pageRef = '/talent'
+    parent = 'contact'
+    weight = 20
+  [[menus.main]]
+    name = 'Investors'
+    pageRef = '/investors'
+    parent = 'contact'
+    weight = 30
