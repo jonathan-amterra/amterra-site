@@ -1,0 +1,9 @@
+{{- /*
+Renders a call-to-action link styled as a button.
+
+@param {string} href The link target.
+@param {string} text The button label.
+
+@example: {{< button href="/mission/" text="Read mission" >}}
+*/ -}}
+<p class="button-row"><a class="button" href="{{ .Get "href" | relURL }}">{{ .Get "text" }} <span aria-hidden="true">→</span></a></p>
