@@ -12,9 +12,4 @@ Thanks in large part to these machines, the world is at the precipice of technol
 
 _Amterra is building heavy equipment in the age of physical intelligence and energy abundance, for Earth and other rocky celestial bodies._
 
-
-## Connect
-
-- **[Clients](/clients/)** — Move Earth cheaper, faster, and safer with Amterra.
-- **[Talent](/talent/)** — Build with us.
-- **[Investors](/investors/)** — Support the mission.
+{{< button href="/mission/" text="Read mission" >}}

@@ -64,6 +64,10 @@ main { flex: 1; }
   margin: 0 auto;
   padding: 32px;
 }
+/* Single-column reading pages: center the 64ch text column */
+.wrap-narrow {
+  max-width: calc(64ch + 64px);
+}
 
 /* Markdown sections — see layouts/_partials/section-content.html.
    Each H2-delimited block is wrapped in <section class="md-section">.
@@ -133,6 +137,9 @@ main h1, main h2, main h3, main h4 {
   color: var(--fg);
   margin: 1.4em 0 0.6em;
 }
+/* Keep anchor targets (e.g. /contact/#talent) clear of the fixed header */
+main h2[id] { scroll-margin-top: 96px; }
+
 main h1 { font-size: 44px; }
 main h2 { font-size: 32px; }
 main h3 { font-size: 24px; }
@@ -172,6 +179,48 @@ main ul li {
 }
 main ul li:last-child { border-bottom: 1px solid var(--rule); }
 main ul li strong { font-weight: 500; }
+
+/* Call-to-action button — layouts/_shortcodes/button.html */
+main .button-row { margin-top: 2em; }
+main a.button {
+  display: inline-block;
+  padding: 12px 22px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--fg);
+  border: 1px solid var(--accent);
+  transition: background 0.2s, color 0.2s;
+}
+main a.button:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--fg);
+}
+
+/* Figures — Hugo's built-in {{< figure >}} shortcode */
+main figure {
+  max-width: 64ch;
+  margin: 2em 0;
+}
+main figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+main figcaption {
+  margin-top: 0.8em;
+  font-family: 'Instrument Serif', 'Times New Roman', serif;
+  font-style: italic;
+  font-size: 18px;
+  color: var(--fg-mute);
+  text-align: center;
+}
+main figure.signature {
+  max-width: 96px;
+  margin: 1em 0 0;
+}
 
 time {
   display: block;
