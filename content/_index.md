@@ -1,5 +1,8 @@
 +++
-title = 'Home'
+# Not rendered on the page; used as the link-preview title
+title = 'American Terraforming Corporation'
+description = 'Amterra is building heavy equipment in the age of physical intelligence and energy abundance, for Earth and other rocky celestial bodies.'
+images = ['images/og-sunset.jpg']
 +++
 
 # Introducing Amterra

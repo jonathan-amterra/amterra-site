@@ -1,5 +1,6 @@
 +++
 title = 'Contact'
+description = 'Get in touch with Amterra as a client, future teammate, or investor.'
 aliases = ['/clients/', '/talent/', '/investors/']
 +++
 
