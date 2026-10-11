@@ -1,7 +1,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
 <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
-<link rel="icon" href="{{ "favicon.ico" | relURL }}" sizes="any">
+{{ partial "head/social.html" . }}
+<link rel="icon"href="{{ "favicon.ico" | relURL }}" sizes="any">
 <link rel="apple-touch-icon" href="{{ "apple-touch-icon.png" | relURL }}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

@@ -1,5 +1,9 @@
 +++
 title = 'Mission'
+previewTitle = "Amterra's Mission"
+description = 'Amterra is building heavy equipment in the age of physical intelligence and energy abundance, for Earth and other rocky celestial bodies.'
+# Link-preview image (iMessage, Slack, X, etc.) — not shown on the page itself
+images = ['images/og-sunset.jpg']
 +++
 
 **Yellow Iron of the past century moved the Earth to feed, shelter, and connect the modern world. Thanks in large part to these machines, the world is at the precipice of technological revolutions that warrant new robots to continue accelerating human prosperity.**
