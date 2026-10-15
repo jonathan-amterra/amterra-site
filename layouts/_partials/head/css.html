@@ -1,15 +1,22 @@
+{{- /*
+  Build, fingerprint, and link main.css.
+
+  We always fingerprint (even in dev) so the served file name and the link href
+  stay in lockstep. The previous version branched on `hugo.IsDevelopment` to emit
+  an unhashed URL in dev and a hashed one in prod, which made Hugo's livereload
+  occasionally desync: the new HTML would reference one filename while the dev
+  server was still serving the other, and the page would render unstyled until a
+  hard reload.
+
+  Tradeoff: editing CSS during dev now requires a page reload to see changes
+  (no in-place style swap). Worth it for stability.
+*/ -}}
 {{- with resources.Get "css/main.css" }}
   {{- $opts := dict
     "minify" (cond hugo.IsDevelopment false true)
     "sourceMap" (cond hugo.IsDevelopment "linked" "none")
   }}
-  {{- with . | css.Build $opts }}
-    {{- if hugo.IsDevelopment }}
-      <link rel="stylesheet" href="{{ .RelPermalink }}">
-    {{- else }}
-      {{- with . | fingerprint }}
-        <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
-      {{- end }}
-    {{- end }}
+  {{- with . | css.Build $opts | fingerprint }}
+    <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
   {{- end }}
 {{- end }}
